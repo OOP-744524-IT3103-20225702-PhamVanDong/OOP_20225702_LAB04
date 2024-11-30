@@ -1,12 +1,10 @@
-package dsai.aims.media;
+package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc extends Media {
+public class DigitalVideoDisc extends Disc {
     private String image;
     private String detail;
-    private String director;
-    private int length;
     private String demoLink;
-    private static int nbDigitalVideoDiscs = 0;
+    private static int nbDigitalVideoDiscs = 1;
 
 
     //Getter and Setter
@@ -27,22 +25,6 @@ public class DigitalVideoDisc extends Media {
         this.detail = detail;
     }
 
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public String getDemoLink() {
         return demoLink;
     }
@@ -56,39 +38,26 @@ public class DigitalVideoDisc extends Media {
     //Constructor
 
     public DigitalVideoDisc(String title, String category, float price, String image, String detail, String director, int length, String demoLink) {
-        this.title = title;
-        this.category = category;
-        this.price = price;
+
+        super(nbDigitalVideoDiscs, title, category, price, director, length);
         this.image = image;
         this.detail = detail;
-        this.director = director;
-        this.length = length;
         this.demoLink = demoLink;
-        this.id = nbDigitalVideoDiscs;
-        nbDigitalVideoDiscs++;
+
     }
 
     public DigitalVideoDisc(String title){
-        this.title = title;
-        this.id = nbDigitalVideoDiscs;
+        super(nbDigitalVideoDiscs, title);
         nbDigitalVideoDiscs++;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float price) {
-        this.category = category;
-        this.title = title;
-        this.length = length;
-        this.price = price;
-        this.director = director;
-        this.id = nbDigitalVideoDiscs;
+        super(nbDigitalVideoDiscs, title, category, price, director, length);
         nbDigitalVideoDiscs++;
     }
 
     public DigitalVideoDisc(String title, String category, float price) {
-        this.category = category;
-        this.title = title;
-        this.price = price;
-        this.id = nbDigitalVideoDiscs;
+        super(nbDigitalVideoDiscs, title,category, price);
         nbDigitalVideoDiscs++;
     }
 

@@ -1,14 +1,14 @@
-package dsai.aims.media;
+package hust.soict.dsai.aims.media;
 
 public class Media {
-    protected int id;
-    protected String title;
-    protected String category;
-    protected float price;
+    private int id;
+    private String title;
+    private String category;
+    private float price;
 
-    public int getId() {
-        return id;
-    }
+
+
+    public int getId() {return id;}
 
     public String getTitle() {
         return title;
@@ -32,5 +32,17 @@ public class Media {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public Media(int id, String title, String category, float price) {
+        this.id = id;
+        this.title = title;
+        this.category = category;
+        this.price = price;
+    }
+
+    public Media(int id, String title) {
+        this.id = id;
+        this.title = title;
     }
 }
