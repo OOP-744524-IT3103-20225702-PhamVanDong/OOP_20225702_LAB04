@@ -1,4 +1,4 @@
-package dsai.aims.media;
+package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,7 @@ public class Book extends Media {
 
     //Constructor
     public Book(int id, String title, String category, float price, List<String> authors) {
-        this.id = id;
-        this.title = title;
-        this.category = category;
-        this.price = price;
+        super(id, title,category,price);
         this.authors = authors;
         nbBooks++;
     }
@@ -31,7 +28,7 @@ public class Book extends Media {
     public void RemoveAuthor(String ... author){
         for (String a : author){
             if (authors.contains(a)) authors.remove(a);
-            else System.out.println("Book "+id+" does not have author " + a);
+            else System.out.println("Book "+ getId() +" does not have author " + a);
         }
     }
 
