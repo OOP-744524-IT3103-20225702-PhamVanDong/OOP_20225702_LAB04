@@ -1,0 +1,13 @@
+Câu hỏi ở 2.1: 
+	Em thích sử dụng phương thức phương thức addDigitalVideoDisc cho phép truyền một số lượng đối số tùy ý vì:
+		+ addDigitalVideoDisc(DigitalVideoDisc [] dvdList) thì ta không thể dùng anOrder.addDigitalVideoDisc(dvd3, dvd2); để thêm dvd2 và dvd3
+ 		+ addDigitalVideoDisc( DigitalVideoDisc... dvdList) thì có thể dùng cả 
+			DigitalVideoDisc[] dvdList = {dvd1, dvd2};
+        		anOrder.addDigitalVideoDisc(dvdList);
+			và
+        		anOrder.addDigitalVideoDisc(dvd3, dvd2);
+			để thêm dvd
+
+Câu hỏi 3: 
+	+ Tiêu đề của 2 đối tượng này vẵn còn vì: khi truyền 2 object vào swap() thì thực chất chỉ là truyền bản sao của 2 object
+	+ Tiêu đề của JungleDVD bị thay đổi vì: khi gọi dvd.setTitle(title);, lệnh này trực tiếp thay đổi tiêu đề của đối tượng mà tham chiếu dvd đang trỏ tới 
