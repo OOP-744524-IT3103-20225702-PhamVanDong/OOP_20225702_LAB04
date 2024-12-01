@@ -6,6 +6,9 @@ public class Media {
     private String category;
     private float price;
 
+    public Media() {
+
+    }
 
 
     public int getId() {return id;}
@@ -44,5 +47,11 @@ public class Media {
     public Media(int id, String title) {
         this.id = id;
         this.title = title;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Media otherMedia = (Media) obj;
+        return this.title != null && this.title.equals(otherMedia.title);
     }
 }
