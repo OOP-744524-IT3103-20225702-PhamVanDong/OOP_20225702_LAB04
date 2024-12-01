@@ -7,12 +7,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Store {
-    private ArrayList<Media>  items;
-
-    public Store() {
-        this.items = new ArrayList<>();
-    }
-
+    private ArrayList<Media>  items = new ArrayList<Media>();;
+    
     public void addDigitalVideoDisc( Media... media) {
         Collections.addAll(items, media);
     }
