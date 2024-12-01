@@ -65,4 +65,9 @@ public class CompactDisc extends Disc implements Playable {
         System.out.println("DVD length: " + getLength());
     }
 
+    @Override
+    public String toString(){
+        return "DVD ["+ getTitle() + " - " + getCategory() + " - " + getDirector() + " - " + getLength()/60+":"+ getLength()%60+ "]: "+ getPrice();
+    }
+
 }
