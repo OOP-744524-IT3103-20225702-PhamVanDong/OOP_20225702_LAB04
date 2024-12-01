@@ -4,32 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompactDisc extends Disc {
-    private String Artist;
+    private String artist;
     private List<Track> tracks = new ArrayList<Track>();
 
 
     //Getter
     public String getArtist() {
-        return Artist;
+        return artist;
     }
 
 
     //Constructor
     public CompactDisc(int id, String title, String category, float price, String director, int length, String artist, List<Track> tracks) {
         super(id, title, category, price, director, length);
-        Artist = artist;
+        artist = artist;
         this.tracks = tracks;
     }
 
     public CompactDisc(int id, String title, String artist, List<Track> tracks) {
         super(id, title);
-        Artist = artist;
+        this.artist = artist;
         this.tracks = tracks;
     }
 
     public CompactDisc(int id, String title, String category, float price, String artist, List<Track> tracks) {
         super(id, title, category, price);
-        Artist = artist;
+        this.artist = artist;
         this.tracks = tracks;
     }
 
