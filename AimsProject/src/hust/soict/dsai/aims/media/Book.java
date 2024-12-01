@@ -19,6 +19,10 @@ public class Book extends Media {
         nbBooks++;
     }
 
+    public Book() {
+
+    }
+
     public void AddAuthor(String ... author){
         for (String a : author){
             if (!authors.contains(a)) authors.add(a);

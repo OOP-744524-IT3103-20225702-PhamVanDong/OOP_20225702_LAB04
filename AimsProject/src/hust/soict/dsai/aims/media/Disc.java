@@ -18,6 +18,10 @@ public class Disc extends Media{
         super(id, title, category, price);
     }
 
+    public Disc() {
+
+    }
+
     public String getDirector() {
         return director;
     }

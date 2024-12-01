@@ -6,6 +6,10 @@ public class DigitalVideoDisc extends Disc implements Playable {
     private String demoLink;
     private static int nbDigitalVideoDiscs = 1;
 
+    public DigitalVideoDisc() {
+
+    }
+
 
     //Getter and Setter
 
